@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #f7f7f7;
+    background-image: url("../img/header");
     padding: 20px;
     text-align: center;
 }
@@ -26,6 +26,10 @@ form {
 
 label {
     margin-bottom: 5px;
+}
+
+h1{
+    font-family: "GreatVibes-Regular";
 }
 
 input {
@@ -52,4 +56,9 @@ footer {
     background-color: #f7f7f7;
     text-align: center;
     padding: 10px;
+}
+
+@font-face {
+    font-family: "GreatVibes-Regular";
+    src: url("../fonts/GreatVibes-Regular")format("truetype");
 }
