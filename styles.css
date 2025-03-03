@@ -6,17 +6,19 @@ body {
 }
 
 header {
-    background-image: url("../img/header");
+    background-image: url("/img/header.jpg");
     padding: 20px;
     text-align: center;
 }
 
 main {
     padding: 20px;
+    text-align: center;
 }
 
 section {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 form {
@@ -32,6 +34,10 @@ h1{
     font-family: "GreatVibes-Regular";
 }
 
+h2{
+    font-family: "GreatVibes-Regular";
+}
+
 input {
     margin-bottom: 10px;
     padding: 8px;
@@ -41,7 +47,7 @@ input {
 
 button {
     padding: 10px;
-    background-color: #007BFF;
+    background-color: #26324d;
     color: white;
     border: none;
     border-radius: 4px;
@@ -49,7 +55,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #497099;
 }
 
 footer {
@@ -60,5 +66,11 @@ footer {
 
 @font-face {
     font-family: "GreatVibes-Regular";
-    src: url("../fonts/GreatVibes-Regular")format("truetype");
+    src: url("/fonts/GreatVibes-Regular.ttf")format("truetype");
+    font-weight: normal;
+
+}
+@font-face {
+    font-family: "GreatVibes-Regular";
+    src: url();
 }
