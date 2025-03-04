@@ -3,39 +3,153 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 200vh;
 }
 
-header {
+.background {
     background-image: url("/img/header.jpg");
-    padding: 20px;
-    text-align: center;
+    transition: opacity 300ms ease-in;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
 }
 
-main {
-    padding: 20px;
+.background-hidden {
+    opacity: 0;
+}
+
+.header-text {
+    font-size: 50px;
+    font-weight: 100;
     text-align: center;
+    transition: opacity 300ms ease-in;
+    z-index: 1000;
+    justify-content: center;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    margin: 0;
+}
+
+.header-text-hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.header-date {
+    font-family: "ZenKakuGothicNew-Light";
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+    transition: opacity 300ms ease-in;
+    z-index: 1000;
+    height: 10%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    margin: 0;
+}
+
+.header-date-hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.section-style {
+    margin-bottom: 20px;
+    text-align: center;
+    transition: opacity 300ms ease-in;
+    opacity: 1;
+}
+
+.section-style-hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.table-calendar {
+    width: 312px;
+    justify-self: center;
+    align-items: center;
+    border-collapse: collapse;
+    background-color: rgb(237, 244, 255);
+    border-radius: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: opacity 300ms ease-in;
+    opacity: 1;
+}
+
+.table-calendar-hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.icon-event::before {
+    content: "favorite_border";
+    font-family: 'Material Icons';
+    position: absolute;
+    font-size: 40px;
+    font-style: normal;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -48%);
+    color: rgb(13, 90, 172);
+    pointer-events: none;
+}
+
+.table-header {
+    width: 100%;
+    text-align: center;
+    font-family: "ZenKakuGothicNew-Medium";
+    padding-top: 8px;
+}
+
+.td-footer {
+    padding-bottom: 8px;
+}
+
+th {
+    font-family: "ZenKakuGothicNew-Regular";
+}
+
+td {
+    font-family: "ZenKakuGothicNew-Regular";
+    padding: 4px;
+    position: relative;
+    overflow: hidden;
 }
 
 section {
-    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+main {
     text-align: center;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
 label {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
-h1{
+h1 {
     font-family: "GreatVibes-Regular";
 }
 
-h2{
-    font-family: "GreatVibes-Regular";
+h2 {
+    font-family: "ZenKakuGothicNew-Medium";
+}
+
+p {
+    font-family: "ZenKakuGothicNew-Regular";
 }
 
 input {
@@ -70,7 +184,19 @@ footer {
     font-weight: normal;
 
 }
+
 @font-face {
-    font-family: "GreatVibes-Regular";
-    src: url();
+    font-family: "ZenKakuGothicNew-Light";
+    src: url("/fonts/ZenKakuGothicNew-Light.ttf") format("truetype");
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: "ZenKakuGothicNew-Regular";
+    src: url("/fonts/ZenKakuGothicNew-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ZenKakuGothicNew-Medium";
+    src: url("/fonts/ZenKakuGothicNew-Medium.ttf") format("truetype");
 }
