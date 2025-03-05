@@ -5,10 +5,14 @@ body {
     padding: 0;
     width: 100%;
     height: 200vh;
+    background-image: url("/img/bg.png");
+    background-size: contain;
+    background-repeat: repeat;
+    color: rgb(54, 54, 54);
 }
 
 .background {
-    background-image: url("/img/header.jpg");
+    background-image: url("/img/header.png");
     transition: opacity 300ms ease-in;
     width: 100%;
     height: 100vh;
@@ -16,6 +20,7 @@ body {
     opacity: 1;
     justify-content: center;
     align-items: center;
+    background-size:cover;
 }
 
 .background-hidden {
@@ -36,11 +41,6 @@ body {
     margin: 0;
 }
 
-.header-text-hidden {
-    opacity: 0;
-    transform: translateY(-100%);
-}
-
 .header-date {
     font-family: "ZenKakuGothicNew-Light";
     font-size: 20px;
@@ -56,11 +56,6 @@ body {
     margin: 0;
 }
 
-.header-date-hidden {
-    opacity: 0;
-    transform: translateY(-100%);
-}
-
 .section-style {
     margin-bottom: 20px;
     text-align: center;
@@ -68,17 +63,12 @@ body {
     opacity: 1;
 }
 
-.section-style-hidden {
-    opacity: 0;
-    transform: translateY(-100%);
-}
-
 .table-calendar {
     width: 312px;
     justify-self: center;
     align-items: center;
     border-collapse: collapse;
-    background-color: rgb(237, 244, 255);
+    background-color: rgb(195, 199, 200);
     border-radius: 12px;
     padding-left: 20px;
     padding-right: 20px;
@@ -86,7 +76,7 @@ body {
     opacity: 1;
 }
 
-.table-calendar-hidden {
+.hidden {
     opacity: 0;
     transform: translateY(-100%);
 }
@@ -101,7 +91,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -48%);
-    color: rgb(13, 90, 172);
+    color: rgb(100, 113, 110);
     pointer-events: none;
 }
 
@@ -152,6 +142,10 @@ p {
     font-family: "ZenKakuGothicNew-Regular";
 }
 
+b {
+    font-family: "ZenKakuGothicNew-Bold";
+}
+
 input {
     margin-bottom: 10px;
     padding: 8px;
@@ -159,30 +153,17 @@ input {
     border: 1px solid #ccc;
 }
 
-button {
-    padding: 10px;
-    background-color: #26324d;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #497099;
-}
-
 footer {
-    background-color: #f7f7f7;
-    text-align: center;
-    padding: 10px;
+    background-image: url("/img/footer.png");
+    background-size: 100% 64px;
+    background-repeat: no-repeat;
+    padding: 32px;
 }
 
 @font-face {
     font-family: "GreatVibes-Regular";
     src: url("/fonts/GreatVibes-Regular.ttf")format("truetype");
     font-weight: normal;
-
 }
 
 @font-face {
@@ -199,4 +180,9 @@ footer {
 @font-face {
     font-family: "ZenKakuGothicNew-Medium";
     src: url("/fonts/ZenKakuGothicNew-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ZenKakuGothicNew-Bold";
+    src: url("/fonts/ZenKakuGothicNew-Bold.ttf") format("truetype");
 }
