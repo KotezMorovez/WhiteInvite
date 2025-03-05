@@ -3,33 +3,147 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 200vh;
+    background-image: url("/img/bg.png");
+    background-size: contain;
+    background-repeat: repeat;
+    color: rgb(54, 54, 54);
 }
 
-header {
-    background-image: url("../img/header");
-    padding: 20px;
+.background {
+    background-image: url("/img/header.png");
+    transition: opacity 300ms ease-in;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+    background-size:cover;
+}
+
+.background-hidden {
+    opacity: 0;
+}
+
+.header-text {
+    font-size: 50px;
+    font-weight: 100;
     text-align: center;
+    transition: opacity 300ms ease-in;
+    z-index: 1000;
+    justify-content: center;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    margin: 0;
 }
 
-main {
-    padding: 20px;
+.header-date {
+    font-family: "ZenKakuGothicNew-Light";
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+    transition: opacity 300ms ease-in;
+    z-index: 1000;
+    height: 10%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    margin: 0;
+}
+
+.section-style {
+    margin-bottom: 20px;
+    text-align: center;
+    transition: opacity 300ms ease-in;
+    opacity: 1;
+}
+
+.table-calendar {
+    width: 312px;
+    justify-self: center;
+    align-items: center;
+    border-collapse: collapse;
+    background-color: rgb(195, 199, 200);
+    border-radius: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: opacity 300ms ease-in;
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.icon-event::before {
+    content: "favorite_border";
+    font-family: 'Material Icons';
+    position: absolute;
+    font-size: 40px;
+    font-style: normal;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -48%);
+    color: rgb(100, 113, 110);
+    pointer-events: none;
+}
+
+.table-header {
+    width: 100%;
+    text-align: center;
+    font-family: "ZenKakuGothicNew-Medium";
+    padding-top: 8px;
+}
+
+.td-footer {
+    padding-bottom: 8px;
+}
+
+th {
+    font-family: "ZenKakuGothicNew-Regular";
+}
+
+td {
+    font-family: "ZenKakuGothicNew-Regular";
+    padding: 4px;
+    position: relative;
+    overflow: hidden;
 }
 
 section {
-    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+main {
+    text-align: center;
 }
 
 label {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
-h1{
+h1 {
     font-family: "GreatVibes-Regular";
+}
+
+h2 {
+    font-family: "ZenKakuGothicNew-Medium";
+}
+
+p {
+    font-family: "ZenKakuGothicNew-Regular";
+}
+
+b {
+    font-family: "ZenKakuGothicNew-Bold";
 }
 
 input {
@@ -39,26 +153,36 @@ input {
     border: 1px solid #ccc;
 }
 
-button {
-    padding: 10px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
 footer {
-    background-color: #f7f7f7;
-    text-align: center;
-    padding: 10px;
+    background-image: url("/img/footer.png");
+    background-size: 100% 64px;
+    background-repeat: no-repeat;
+    padding: 32px;
 }
 
 @font-face {
     font-family: "GreatVibes-Regular";
-    src: url("../fonts/GreatVibes-Regular")format("truetype");
+    src: url("/fonts/GreatVibes-Regular.ttf")format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ZenKakuGothicNew-Light";
+    src: url("/fonts/ZenKakuGothicNew-Light.ttf") format("truetype");
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: "ZenKakuGothicNew-Regular";
+    src: url("/fonts/ZenKakuGothicNew-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ZenKakuGothicNew-Medium";
+    src: url("/fonts/ZenKakuGothicNew-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ZenKakuGothicNew-Bold";
+    src: url("/fonts/ZenKakuGothicNew-Bold.ttf") format("truetype");
 }
