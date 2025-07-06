@@ -6,6 +6,8 @@ const greetingsBody = document.querySelector('#greetingsBody')
 const detailsHeader = document.querySelector('#eventDetailsHeader')
 const deatilsBody = document.querySelector('#eventDetailsBody')
 const calendar = document.querySelector('#calendar')
+const placeRegInfo = document.querySelector('#place-reg-info')
+const mapReg = document.querySelector('#map-reg')
 const placeMainInfo = document.querySelector('#place-main-info')
 const map = document.querySelector('#map')
 const dressCodeHeader = document.querySelector('#dress-code-header')
@@ -22,6 +24,8 @@ const greetingsBodyBounds = greetingsBody.getBoundingClientRect()
 const detailsHeaderBounds = detailsHeader.getBoundingClientRect()
 const deatilsBodyBounds = deatilsBody.getBoundingClientRect()
 const calendarBounds = deatilsBody.getBoundingClientRect()
+const placeRegBounds = placeRegInfo.getBoundingClientRect()
+const mapRegBounds = mapReg.getBoundingClientRect()
 const placeInfoBounds = placeMainInfo.getBoundingClientRect()
 const mapBounds = map.getBoundingClientRect()
 const dressCodeHeaderBounds = dressCodeHeader.getBoundingClientRect()
@@ -67,6 +71,14 @@ window.addEventListener('scroll', () => {
 
     if (scrollWithHeader > calendarBounds.y + calendarBounds.height) {
         calendar.classList.remove('hidden')
+    }
+
+    if (scrollWithHeader > placeRegBounds.y + placeRegBounds.height) {
+        placeRegInfo.classList.remove('hidden')
+    }
+
+    if (scrollWithHeader > mapRegBounds.y + mapRegBounds.height) {
+        mapReg.classList.remove('hidden')
     }
 
     if (scrollWithHeader > placeInfoBounds.y + placeInfoBounds.height) {
